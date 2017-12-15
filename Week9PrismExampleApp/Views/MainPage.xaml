@@ -9,8 +9,8 @@
     Padding="0,20,0,0">
       
     <ContentPage.Content>
-        <StackLayout BackgroundColor="Black">
-            <StackLayout BackgroundColor="White"
+        <StackLayout BackgroundColor="White">
+            <StackLayout BackgroundColor="Gray"
                      Orientation="Horizontal"
                      HeightRequest="40"
                      Spacing="0">
@@ -37,13 +37,13 @@
 
                 </StackLayout>
                 <Label Text="Videos"
-                BackgroundColor="Black"
-                TextColor="Red"/>
+                BackgroundColor="White"
+                TextColor="Black"/>
                 <ListView x:Name="videoListView"
                     ItemsSource="{Binding VideoSearchResults}"
                     SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
 
-                BackgroundColor="Black"
+                BackgroundColor="White"
                       SeparatorColor="LightGray"
                 >
 
@@ -53,7 +53,7 @@
                             <ImageCell ImageSource="{Binding DefaultThumbnailURL}"
                                        Text="{Binding VideoTitle}"
                                        Detail="{Binding VideoDescription}"
-                                       TextColor="White"
+                                       TextColor="Black"
                                        DetailColor="Green"
                                        Command="{Binding TappedCommand}"
                                        CommandParameter="{Binding .}"
@@ -63,12 +63,12 @@
                     </ListView.ItemTemplate>
                 </ListView>
                  <Label Text="Channels"
-                BackgroundColor="Black"
-                TextColor="Red"/>
+                BackgroundColor="White"
+                TextColor="Black"/>
                 <ListView x:Name="channelListView" 
                           ItemsSource="{Binding ChannelSearchResults}" 
                           SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
-                          BackgroundColor="Black"
+                          BackgroundColor="White"
                           SeparatorColor="LightGray"
                 >
 
@@ -78,7 +78,7 @@
                             <ImageCell ImageSource="{Binding DefaultThumbnailURL}"
                                        Text="{Binding ChannelTitle}"
                                        Detail="{Binding ChannelDescription}"
-                                       TextColor="White"
+                                       TextColor="Black"
                                        DetailColor="Green"
                                        Command="{Binding TappedCommand}"
                                        CommandParameter="{Binding .}"
@@ -88,14 +88,14 @@
                     </ListView.ItemTemplate>
                 </ListView>
                     <Label Text="Playlists"
-                    BackgroundColor="Black"
-                    TextColor="Red"/>
+                    BackgroundColor="White"
+                    TextColor="Black"/>
                 <ListView x:Name="playListView"
                           ItemsSource="{Binding PlaylistSearchResults}"
                           SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
                     
 
-                BackgroundColor="Black"
+                BackgroundColor="White"
                       SeparatorColor="LightGray"
                 >
 
@@ -105,7 +105,7 @@
                             <ImageCell ImageSource="{Binding DefaultThumbnailURL}"
                                        Text="{Binding PlaylistTitle}"
                                        Detail="{Binding PlaylistDescription}"
-                                       TextColor="White"
+                                       TextColor="Black"
                                        DetailColor="Green"
                                        Command="{Binding TappedCommand}"
                                        CommandParameter="{Binding .}"
