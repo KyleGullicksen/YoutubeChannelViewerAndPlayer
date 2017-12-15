@@ -238,6 +238,7 @@ namespace Week9PrismExampleApp.ViewModels {
 
             //TOM ADDED THIS - PLEASE DELETE IF NO WORK
             resource.VideoTitle = snippet.Value<string>("title");
+            resource.VideoDescription = snippet.Value<string>("description");
 
             resource.VideoThumbnail = defaultThumbnails.Value<string>("url");
             resource.DefaultThumbnailURL = resource.VideoThumbnail;
