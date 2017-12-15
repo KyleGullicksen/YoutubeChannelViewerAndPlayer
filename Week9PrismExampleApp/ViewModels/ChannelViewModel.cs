@@ -15,7 +15,7 @@ using Newtonsoft.Json.Linq;
 
 namespace Week9PrismExampleApp.ViewModels
 {
-    public class ChannelViewModel : BindableBase
+    public class ChannelViewModel : BindableBase, IPageNavigationAware
     {
         private string channelURL = "";
         private YoutubeResource youtubeResource;
@@ -74,7 +74,7 @@ namespace Week9PrismExampleApp.ViewModels
             if (parameters.ContainsKey(Constants.ParameterKeys.YoutubeResource))
             {
                 youtubeResource = parameters[Constants.ParameterKeys.YoutubeResource] as YoutubeResource;
-                channelURL = makeURL(youtubeResource.PlaylistId);
+                channelURL = makeURL(youtubeResource.ChannelId);
 
                 //Request the videos for this channel
                 await GetVideoIdsFromChannelAsync();
@@ -83,7 +83,7 @@ namespace Week9PrismExampleApp.ViewModels
             {
                 YoutubeResource testResource = new YoutubeResource();
                 testResource.ChannelId = "UC_x5XG1OV2P6uZZ5FSM9Ttw";
-                channelURL = makeURL(youtubeResource.PlaylistId);
+                channelURL = makeURL(youtubeResource.ChannelId);
 
                 //Request the videos for this channel
                 await GetVideoIdsFromChannelAsync();
@@ -158,5 +158,15 @@ namespace Week9PrismExampleApp.ViewModels
 			resource.VideoThumbnail = defaultThumbnails.Value<string>("url");
 			resource.DefaultThumbnailURL = resource.VideoThumbnail;
 		}
+
+        public void OnAppearing()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void OnDisappearing()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

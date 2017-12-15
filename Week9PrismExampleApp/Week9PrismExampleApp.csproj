@@ -47,6 +47,7 @@
     <Compile Include="Views\ChannelPage.xaml.cs">
       <DependentUpon>ChannelPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="IPageNavigationAware.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">
