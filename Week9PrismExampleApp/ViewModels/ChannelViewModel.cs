@@ -34,6 +34,25 @@ namespace Week9PrismExampleApp.ViewModels
             set { SetProperty(ref _channelVideos, value); }
         }
 
+		//SelectedItem
+		private YoutubeResource _selectedItem;
+		public YoutubeResource SelectedItem
+		{
+			get
+			{
+				return _selectedItem;
+			}
+			set
+			{
+				_selectedItem = value;
+
+				if (_selectedItem == null)
+					return;
+
+				HandleVideoTappedCommand(value);
+			}
+		}
+
         INavigationService _navigationService;
         public ChannelViewModel(INavigationService navigationService)
         {
@@ -86,7 +105,6 @@ namespace Week9PrismExampleApp.ViewModels
             CrossShare.Current.OpenBrowser("https://www.youtube.com/watch?v=" + item.VideoId);
         }
 
-
         protected string makeURL(string channelID)
         {
             return
@@ -99,45 +117,46 @@ namespace Week9PrismExampleApp.ViewModels
 
 
         //Request the resources in this channel from the youtube data api
-        private async Task<ObservableCollection<YoutubeResource>> GetVideoIdsFromChannelAsync()
+        private async Task GetVideoIdsFromChannelAsync()
         {
             var httpClient = new HttpClient();
             var jsonResponse = await httpClient.GetStringAsync(channelURL);
-
-            ObservableCollection<YoutubeResource> videoResources = new ObservableCollection<YoutubeResource>();
-            YoutubeResource currentResource;
-            string currentVideoId;
 
             try
             {
                 JObject response = JsonConvert.DeserializeObject<dynamic>(jsonResponse);
 
                 var items = response.Value<JArray>("items");
+                YoutubeResource resource;
 
-                foreach (var item in items)
+                foreach (JObject item in items)
                 {
-                    var id = item.Value<JObject>("id");
-                    currentVideoId = id.Value<string>("videoId");
-
-                    currentResource = new YoutubeResource
-                    {
-                        VideoId = currentVideoId
-                    };
-                    videoResources.Add(currentResource);
+                    resource = new YoutubeResource();
+                    processVideoItem(item, resource);
+                    ChannelVideos.Add(resource);
                 }
-
-                ChannelVideos = videoResources;
             }
             catch (Exception e)
             {
                 //Log the issue, but just return an empty list to the user
                 System.Diagnostics.Debug.WriteLine(e);
             }
-
-            return videoResources; //or whatever we've got
         }
 
+		protected void processVideoItem(JObject item, YoutubeResource resource)
+		{
+			JObject id = item.Value<JObject>("id");
+			resource.VideoId = id.Value<string>("videoId");
 
+			JObject snippet = item.Value<JObject>("snippet");
+			JObject thumbnails = snippet.Value<JObject>("thumbnails");
+			JObject defaultThumbnails = thumbnails.Value<JObject>("default");
 
+			resource.VideoTitle = snippet.Value<string>("title");
+			resource.VideoDescription = snippet.Value<string>("description");
+
+			resource.VideoThumbnail = defaultThumbnails.Value<string>("url");
+			resource.DefaultThumbnailURL = resource.VideoThumbnail;
+		}
     }
 }

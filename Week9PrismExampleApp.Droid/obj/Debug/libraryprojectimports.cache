@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Paths>
+  <Jars></Jars>
+  <ResolvedResourceDirectories>
+    <ResolvedResourceDirectory>/Users/gulli003/Projects/FinalProject/FinalProjectVersion44/Week9PrismExampleApp.Droid/obj/Debug/__library_projects__/Microsoft.AppCenter.Analytics.Android.Bindings/library_project_imports/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/gulli003/Projects/FinalProject/FinalProjectVersion44/Week9PrismExampleApp.Droid/obj/Debug/__library_projects__/Microsoft.AppCenter.Analytics/library_project_imports/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/gulli003/Projects/FinalProject/FinalProjectVersion44/Week9PrismExampleApp.Droid/obj/Debug/__library_projects__/Microsoft.AppCenter.Android.Bindings/library_project_imports/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/gulli003/Projects/FinalProject/FinalProjectVersion44/Week9PrismExampleApp.Droid/obj/Debug/__library_projects__/Microsoft.AppCenter.Crashes.Android.Bindings/library_project_imports/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/gulli003/Projects/FinalProject/FinalProjectVersion44/Week9PrismExampleApp.Droid/obj/Debug/__library_projects__/Microsoft.AppCenter.Crashes/library_project_imports/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/gulli003/Projects/FinalProject/FinalProjectVersion44/Week9PrismExampleApp.Droid/obj/Debug/__library_projects__/Microsoft.AppCenter/library_project_imports/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/gulli003/Projects/FinalProject/FinalProjectVersion44/Week9PrismExampleApp.Droid/obj/Debug/__library_projects__/Plugin.CurrentActivity/library_project_imports/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/gulli003/Projects/FinalProject/FinalProjectVersion44/Week9PrismExampleApp.Droid/obj/Debug/__library_projects__/Plugin.Share/library_project_imports/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/gulli003/Projects/FinalProject/FinalProjectVersion44/Week9PrismExampleApp.Droid/obj/Debug/__library_projects__/Xamarin.Forms.Platform.Android/library_project_imports/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/gulli003/Projects/FinalProject/FinalProjectVersion44/Week9PrismExampleApp.Droid/obj/Debug/__library_projects__/Xamarin.Forms.Platform/library_project_imports/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/gulli003/Projects/FinalProject/FinalProjectVersion44/Week9PrismExampleApp.Droid/obj/Debug/__library_projects__/Plugin.Share/library_project_imports/res</ResolvedResourceDirectory>
+  </ResolvedResourceDirectories>
+  <ResolvedAssetDirectories>
+    <ResolvedAssetDirectory>obj/Debug/__library_projects__/Microsoft.AppCenter.Analytics.Android.Bindings/library_project_imports/assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj/Debug/__library_projects__/Microsoft.AppCenter.Analytics/library_project_imports/assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj/Debug/__library_projects__/Microsoft.AppCenter.Android.Bindings/library_project_imports/assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj/Debug/__library_projects__/Microsoft.AppCenter.Crashes.Android.Bindings/library_project_imports/assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj/Debug/__library_projects__/Microsoft.AppCenter.Crashes/library_project_imports/assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj/Debug/__library_projects__/Microsoft.AppCenter/library_project_imports/assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj/Debug/__library_projects__/Plugin.CurrentActivity/library_project_imports/assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj/Debug/__library_projects__/Plugin.Share/library_project_imports/assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj/Debug/__library_projects__/Xamarin.Forms.Platform.Android/library_project_imports/assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj/Debug/__library_projects__/Xamarin.Forms.Platform/library_project_imports/assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj/Debug/__library_projects__/Plugin.Share/library_project_imports/assets</ResolvedAssetDirectory>
+  </ResolvedAssetDirectories>
+  <ResolvedEnvironmentFiles />
+  <ResolvedResourceDirectoryStamps>
+    <ResolvedResourceDirectoryStamp>/Users/gulli003/Projects/FinalProject/FinalProjectVersion44/Week9PrismExampleApp.Droid/obj/Debug/__library_projects__/Microsoft.AppCenter.Analytics.Android.Bindings.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/gulli003/Projects/FinalProject/FinalProjectVersion44/Week9PrismExampleApp.Droid/obj/Debug/__library_projects__/Microsoft.AppCenter.Analytics.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/gulli003/Projects/FinalProject/FinalProjectVersion44/Week9PrismExampleApp.Droid/obj/Debug/__library_projects__/Microsoft.AppCenter.Android.Bindings.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/gulli003/Projects/FinalProject/FinalProjectVersion44/Week9PrismExampleApp.Droid/obj/Debug/__library_projects__/Microsoft.AppCenter.Crashes.Android.Bindings.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/gulli003/Projects/FinalProject/FinalProjectVersion44/Week9PrismExampleApp.Droid/obj/Debug/__library_projects__/Microsoft.AppCenter.Crashes.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/gulli003/Projects/FinalProject/FinalProjectVersion44/Week9PrismExampleApp.Droid/obj/Debug/__library_projects__/Microsoft.AppCenter.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/gulli003/Projects/FinalProject/FinalProjectVersion44/Week9PrismExampleApp.Droid/obj/Debug/__library_projects__/Plugin.CurrentActivity.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/gulli003/Projects/FinalProject/FinalProjectVersion44/Week9PrismExampleApp.Droid/obj/Debug/__library_projects__/Plugin.Share.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/gulli003/Projects/FinalProject/FinalProjectVersion44/Week9PrismExampleApp.Droid/obj/Debug/__library_projects__/Xamarin.Forms.Platform.Android.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/gulli003/Projects/FinalProject/FinalProjectVersion44/Week9PrismExampleApp.Droid/obj/Debug/__library_projects__/Xamarin.Forms.Platform.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/gulli003/Projects/FinalProject/FinalProjectVersion44/Week9PrismExampleApp.Droid/obj/Debug/__library_projects__/Plugin.Share.stamp</ResolvedResourceDirectoryStamp>
+  </ResolvedResourceDirectoryStamps>
+</Paths>

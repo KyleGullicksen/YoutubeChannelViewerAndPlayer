@@ -11,8 +11,8 @@
 namespace Week9PrismExampleApp.Views {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/gulli003/Downloads/FinalProjectVersion43-master/Week9PrismExampleApp/Views" +
-        "/ChannelPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/gulli003/Projects/FinalProject/FinalProjectVersion44/Week9PrismExampleApp/" +
+        "Views/ChannelPage.xaml")]
     public partial class ChannelPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
