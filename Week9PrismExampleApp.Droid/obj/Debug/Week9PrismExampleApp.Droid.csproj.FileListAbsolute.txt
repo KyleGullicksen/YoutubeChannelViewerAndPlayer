@@ -1,0 +1,4 @@
+/Users/gulli003/Downloads/FinalProjectVersion43-master/Week9PrismExampleApp.Droid/obj/Debug/Week9PrismExampleApp.Droid.csprojResolveAssemblyReference.cache
+/Users/gulli003/Downloads/FinalProjectVersion43-master/Week9PrismExampleApp.Droid/obj/Debug/XbdMerge/Xamarin.Android.Support.Annotations.dll.stamp
+/Users/gulli003/Downloads/FinalProjectVersion43-master/Week9PrismExampleApp.Droid/obj/Debug/XbdMerge/Xamarin.Android.Support.Compat.dll.stamp
+/Users/gulli003/Downloads/FinalProjectVersion43-master/Week9PrismExampleApp.Droid/obj/Debug/XbdMerge/Xamarin.Android.Support.CustomTabs.dll.stamp

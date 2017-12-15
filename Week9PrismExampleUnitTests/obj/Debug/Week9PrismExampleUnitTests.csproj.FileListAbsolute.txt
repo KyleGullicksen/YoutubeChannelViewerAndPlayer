@@ -1,0 +1,2 @@
+/Users/gulli003/Downloads/FinalProjectVersion43-master/Week9PrismExampleUnitTests/obj/Debug/Week9PrismExampleUnitTests.csprojResolveAssemblyReference.cache
+/Users/gulli003/Downloads/FinalProjectVersion43-master/Week9PrismExampleUnitTests/obj/Debug/Week9PrismExampleUnitTests.csproj.CoreCompileInputs.cache

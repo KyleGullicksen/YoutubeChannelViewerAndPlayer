@@ -41,6 +41,7 @@
                 TextColor="Red"/>
                 <ListView x:Name="videoListView"
                     ItemsSource="{Binding VideoSearchResults}"
+                    SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
 
                 BackgroundColor="Black"
                       SeparatorColor="LightGray"
@@ -64,7 +65,7 @@
                  <Label Text="Channels"
                 BackgroundColor="Black"
                 TextColor="Red"/>
-                <ListView x:Name="channelListView"
+                <ListView x:Name="channelListView" SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
                     
 
                 BackgroundColor="Black"
@@ -89,7 +90,7 @@
                     <Label Text="Playlists"
                     BackgroundColor="Black"
                     TextColor="Red"/>
-                <ListView x:Name="playListView"
+                <ListView x:Name="playListView" SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
                     
 
                 BackgroundColor="Black"

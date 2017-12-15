@@ -36,6 +36,7 @@ namespace Week9PrismExampleApp.ViewModels {
 
         public MainPageViewModel(INavigationService navigationService) {
             _navigationService = navigationService;
+            SelectedItem = new YoutubeResource();
 
             //GetYoutubeInfoCommand = new DelegateCommand(GetYoutubeInfo);
             GetYoutubeInfoCommand = new DelegateCommand < Xamarin.Forms.Entry > (HandleYoutubeInfoCommand);
@@ -51,6 +52,26 @@ namespace Week9PrismExampleApp.ViewModels {
                 SetProperty(ref _userSearchTopic, value);
             }
         }
+
+        //SelectedItem
+        private YoutubeResource _selectedItem;
+        public YoutubeResource SelectedItem
+        {
+            get
+            {
+                return _selectedItem;
+            }
+            set
+            {
+                _selectedItem = value;
+
+                if (_selectedItem == null)
+                    return;
+
+                HandleTappedCommand(value);
+            }
+        }
+
 
         private ObservableCollection<YoutubeResource> _channelSearchResults = new ObservableCollection < YoutubeResource > ();
         public ObservableCollection < YoutubeResource > ChannelSearchResults {
@@ -121,27 +142,33 @@ namespace Week9PrismExampleApp.ViewModels {
             string query = entry.Text.ToLower();
             userSearchTopic = query;
 
-            GetSearchResultsFromYoutube(query);
+            VideoSearchResults.Clear();
+            ChannelSearchResults.Clear();
+            PlaylistSearchResults.Clear();
+
+            GetSearchResultsFromYoutube(query, "channel");
+            GetSearchResultsFromYoutube(query, "video");
+            GetSearchResultsFromYoutube(query, "playlist");
         }
 
 
-        protected string MakeURL(string query)
+        protected string MakeURL(string query, string type)
         {
             //https://www.googleapis.com/youtube/v3/search?part=snippet&q=UC_x5XG1OV2P6uZZ5FSM9Ttw&type=channel&key=AIzaSyDJtnAbi6KrX0Mw9yA6_HDJbbkskEP1JHY
             string address = 
                 "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q="
                 + query
+                + "&type="
+                + type
                 + "&key="
                 + Constants.API.KEY;
 
             return address;
         }
 
-        internal async void GetSearchResultsFromYoutube(string query)
+        internal async void GetSearchResultsFromYoutube(string query, string type)
         {
-            string address = MakeURL(query);
-
-            System.Diagnostics.Debug.WriteLine("Address: " + address);
+            string address = MakeURL(query, type);
 
             //Open a GET conenction
             HttpClient httpClient = new HttpClient();

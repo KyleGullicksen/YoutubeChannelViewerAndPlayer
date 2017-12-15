@@ -49,3 +49,5 @@
 /Users/gulli003/Downloads/FinalProjectVersion43-master/Week9PrismExampleApp/obj/Debug/Week9PrismExampleApp.Views.ChannelPage.xaml.g.cs
 /Users/gulli003/Downloads/FinalProjectVersion43-master/Week9PrismExampleApp/obj/Debug/Week9PrismExampleApp.dll
 /Users/gulli003/Downloads/FinalProjectVersion43-master/Week9PrismExampleApp/obj/Debug/Week9PrismExampleApp.pdb
+/Users/gulli003/Downloads/FinalProjectVersion43-master/Week9PrismExampleApp/bin/Debug/DLToolkit.Forms.Controls.FlowListView.dll
+/Users/gulli003/Downloads/FinalProjectVersion43-master/Week9PrismExampleApp/bin/Debug/DLToolkit.Forms.Controls.FlowListView.xml
