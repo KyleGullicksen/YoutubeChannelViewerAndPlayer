@@ -51,8 +51,8 @@
                         <DataTemplate>
 
                             <ImageCell ImageSource="{Binding DefaultThumbnailURL}"
-                                       Text=""
-                                       Detail=""
+                                       Text="{Binding VideoTitle}"
+                                       Detail="{Binding VideoDescription}"
                                        TextColor="White"
                                        DetailColor="Green"
                                        Command="{Binding TappedCommand}"
@@ -65,11 +65,11 @@
                  <Label Text="Channels"
                 BackgroundColor="Black"
                 TextColor="Red"/>
-                <ListView x:Name="channelListView" SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
-                    
-
-                BackgroundColor="Black"
-                      SeparatorColor="LightGray"
+                <ListView x:Name="channelListView" 
+                          ItemsSource="{Binding ChannelSearchResults}" 
+                          SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
+                          BackgroundColor="Black"
+                          SeparatorColor="LightGray"
                 >
 
                     <ListView.ItemTemplate>
@@ -90,7 +90,9 @@
                     <Label Text="Playlists"
                     BackgroundColor="Black"
                     TextColor="Red"/>
-                <ListView x:Name="playListView" SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
+                <ListView x:Name="playListView"
+                          ItemsSource="{Binding PlaylistSearchResults}"
+                          SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
                     
 
                 BackgroundColor="Black"

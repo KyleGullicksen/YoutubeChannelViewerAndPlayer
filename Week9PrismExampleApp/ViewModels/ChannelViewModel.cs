@@ -50,7 +50,7 @@ namespace Week9PrismExampleApp.ViewModels
         //SearchResults -> here 
         //Expected parameters:
         //Youtube Resource
-        public void OnNavigatedTo(NavigationParameters parameters)
+        async public void OnNavigatedTo(NavigationParameters parameters)
         {
             if (parameters.ContainsKey(Constants.ParameterKeys.YoutubeResource))
             {
@@ -58,7 +58,7 @@ namespace Week9PrismExampleApp.ViewModels
                 channelURL = makeURL(youtubeResource.PlaylistId);
 
                 //Request the videos for this channel
-                GetVideoIdsFromChannelAsync();
+                await GetVideoIdsFromChannelAsync();
             }
             else //Run our testing code
             {
@@ -67,7 +67,7 @@ namespace Week9PrismExampleApp.ViewModels
                 channelURL = makeURL(youtubeResource.PlaylistId);
 
                 //Request the videos for this channel
-                GetVideoIdsFromChannelAsync();
+                await GetVideoIdsFromChannelAsync();
 
             }
         }

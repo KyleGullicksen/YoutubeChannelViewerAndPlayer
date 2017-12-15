@@ -236,6 +236,9 @@ namespace Week9PrismExampleApp.ViewModels {
             JObject thumbnails = snippet.Value<JObject>("thumbnails");
             JObject defaultThumbnails = thumbnails.Value<JObject>("default");
 
+            //TOM ADDED THIS - PLEASE DELETE IF NO WORK
+            resource.VideoTitle = snippet.Value<string>("title");
+
             resource.VideoThumbnail = defaultThumbnails.Value<string>("url");
             resource.DefaultThumbnailURL = resource.VideoThumbnail;
 

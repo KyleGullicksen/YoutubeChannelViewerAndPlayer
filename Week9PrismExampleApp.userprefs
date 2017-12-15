@@ -9,7 +9,7 @@
       <File FileName="Week9PrismExampleApp/App.xaml.cs" Line="34" Column="4" />
       <File FileName="Week9PrismExampleApp/ViewModels/ChannelViewModel.cs" Line="86" Column="95" />
       <File FileName="Week9PrismExampleApp/ViewModels/YoutubeViewModel.cs" Line="9" Column="28" />
-      <File FileName="Week9PrismExampleApp/Views/MainPage.xaml" Line="93" Column="99" />
+      <File FileName="Week9PrismExampleApp/Views/MainPage.xaml" Line="121" Column="1" />
       <File FileName="Week9PrismExampleApp/Models/YoutubeResource.cs" Line="13" Column="42" />
       <File FileName="Week9PrismExampleApp/Constants/Constants.cs" Line="6" Column="76" />
       <File FileName="Week9PrismExampleApp/ApiKeys.cs" Line="1" Column="1" />
@@ -27,7 +27,7 @@
   </MonoDevelop.Ide.DebuggingService.PinnedWatches>
   <MonoDevelop.Ide.ItemProperties.Week9PrismExampleApp.Droid PreferredExecutionTarget="Android.SelectDevice" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Week9PrismExampleApp.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.3584AA34-808A-4D2A-A2E0-292FCD7C3B1C">
+  <MonoDevelop.Ide.ItemProperties.Week9PrismExampleApp.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.4B668AFD-CAB3-45A2-9D33-1F683994580A">
     <MonoDevelop.MacDev.AppleDevelopmentTeam />
   </MonoDevelop.Ide.ItemProperties.Week9PrismExampleApp.iOS>
 </Properties>
