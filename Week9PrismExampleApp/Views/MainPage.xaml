@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    x:Class="Week9PrismExampleApp.Views.MainPage"
+    Title="MainPage"
+    Padding="0,20,0,0">
+      
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Black">
+            <StackLayout BackgroundColor="White"
+                     Orientation="Horizontal"
+                     HeightRequest="40"
+                     Spacing="0">
+
+                <Entry
+                    x:Name="mahBax"
+                    HorizontalOptions="FillAndExpand"
+                    Placeholder="Search Here"
+                    PlaceholderColor="DarkGray"
+                    BackgroundColor="White"
+            
+            />
+
+                <Button Text="🔍"
+                    BackgroundColor="WhiteSmoke"
+                    
+                    WidthRequest="50"
+                    HeightRequest="50"
+                    BorderColor="White"
+                    Command="{Binding GetYoutubeInfoCommand}"
+                    CommandParameter="{x:Reference mahBax}"
+
+                />
+
+                </StackLayout>
+                <Label Text="Videos"
+                BackgroundColor="Black"
+                TextColor="Red"/>
+                <ListView x:Name="videoListView"
+                    ItemsSource="{Binding VideoSearchResults}"
+
+                BackgroundColor="Black"
+                      SeparatorColor="LightGray"
+                >
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+
+                            <ImageCell ImageSource="{Binding DefaultThumbnailURL}"
+                                       Text=""
+                                       Detail=""
+                                       TextColor="White"
+                                       DetailColor="Green"
+                                       Command="{Binding TappedCommand}"
+                                       CommandParameter="{Binding .}"
+
+                            />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                 <Label Text="Channels"
+                BackgroundColor="Black"
+                TextColor="Red"/>
+                <ListView x:Name="channelListView"
+                    
+
+                BackgroundColor="Black"
+                      SeparatorColor="LightGray"
+                >
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+
+                            <ImageCell ImageSource="{Binding DefaultThumbnailURL}"
+                                       Text="{Binding ChannelTitle}"
+                                       Detail="{Binding ChannelDescription}"
+                                       TextColor="White"
+                                       DetailColor="Green"
+                                       Command="{Binding TappedCommand}"
+                                       CommandParameter="{Binding .}"
+
+                            />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                    <Label Text="Playlists"
+                    BackgroundColor="Black"
+                    TextColor="Red"/>
+                <ListView x:Name="playListView"
+                    
+
+                BackgroundColor="Black"
+                      SeparatorColor="LightGray"
+                >
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+
+                            <ImageCell ImageSource="{Binding DefaultThumbnailURL}"
+                                       Text="{Binding PlaylistTitle}"
+                                       Detail="{Binding PlaylistDescription}"
+                                       TextColor="White"
+                                       DetailColor="Green"
+                                       Command="{Binding TappedCommand}"
+                                       CommandParameter="{Binding .}"
+
+                            />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            
+
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

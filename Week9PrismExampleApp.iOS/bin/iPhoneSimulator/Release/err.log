@@ -1,0 +1,19 @@
+objc[51576]: Class PLBuildVersion is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/PrivateFrameworks/AssetsLibraryServices.framework/AssetsLibraryServices (0x11ed27cc0) and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/PrivateFrameworks/PhotoLibraryServices.framework/PhotoLibraryServices (0x11eb3e6f0). One of the two will be used. Which one is undefined.
+2017-12-15 04:06:05.021 Week9PrismExampleApp.iOS[51576:2134538] [AppCenter] ASSERT: -[MSAppCenter configure:]/208 App Center SDK configured successfully.
+2017-12-15 04:06:05.036 Week9PrismExampleApp.iOS[51576:2134538] *** -[NSKeyedUnarchiver initForReadingWithData:]: data is NULL
+2017-12-15 04:06:06.128 Week9PrismExampleApp.iOS[51576:2134574] *** -[NSKeyedUnarchiver initForReadingWithData:]: data is NULL
+2017-12-15 04:06:21.140 Week9PrismExampleApp.iOS[51576:2134538] Unhandled managed exception:
+Object reference not set to an instance of an object (System.NullReferenceException)
+  at Week9PrismExampleApp.ViewModels.MainPageViewModel.processChannelItem (Newtonsoft.Json.Linq.JObject item, Week9PrismExampleApp.Models.YoutubeResource resource) [0x00072] in <c4f88369ee5f442888c63d3ca494a634>:0 
+  at Week9PrismExampleApp.ViewModels.MainPageViewModel.processItem (Newtonsoft.Json.Linq.JObject item, Week9PrismExampleApp.Models.ResourceType type, Week9PrismExampleApp.Models.YoutubeResource resource) [0x00014] in <c4f88369ee5f442888c63d3ca494a634>:0 
+  at Week9PrismExampleApp.ViewModels.MainPageViewModel+<GetSearchResultsFromYoutube>d__22.MoveNext () [0x00116] in <c4f88369ee5f442888c63d3ca494a634>:0 
+--- End of stack trace from previous location where exception was thrown ---
+  at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw () [0x0000c] in <136edfc8e644410eb152bce382121c61>:0 
+  at System.Runtime.CompilerServices.AsyncMethodBuilderCore+<>c.<ThrowAsync>b__6_0 (System.Object state) [0x00000] in <136edfc8e644410eb152bce382121c61>:0 
+  at UIKit.UIKitSynchronizationContext+<Post>c__AnonStorey0.<>m__0 () [0x00000] in <f5f7bf9082f2423098c34fc985600d02>:0 
+  at Foundation.NSAsyncActionDispatcher.Apply () [0x00000] in <f5f7bf9082f2423098c34fc985600d02>:0 
+--- End of stack trace from previous location where exception was thrown ---
+  at (wrapper managed-to-native) UIKit.UIApplication:UIApplicationMain (int,string[],intptr,intptr)
+  at UIKit.UIApplication.Main (System.String[] args, System.IntPtr principal, System.IntPtr delegate) [0x00005] in <f5f7bf9082f2423098c34fc985600d02>:0 
+  at UIKit.UIApplication.Main (System.String[] args, System.String principalClassName, System.String delegateClassName) [0x00038] in <f5f7bf9082f2423098c34fc985600d02>:0 
+  at Week9PrismExampleApp.iOS.Application.Main (System.String[] args) [0x00000] in <2176a5d683e24f809b40a04fcc88aab4>:0 

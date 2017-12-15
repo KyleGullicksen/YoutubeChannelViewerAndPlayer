@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:behaviors="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+    xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    x:Class="Week9PrismExampleApp.Views.SamplePageForNavigation"
+    BackgroundColor="Black"
+    Padding="0,20,0,0">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal"
+                         BackgroundColor="#282828"
+                         HorizontalOptions="FillAndExpand">           
+                <Image 
+                        Source="{Binding imageUrl}"/>
+                <Label BackgroundColor="#282828"
+                        VerticalOptions="Center"
+                       Text="Channel name here" 
+                       TextColor="Lime"/>
+                <Button BackgroundColor="#3C3C3C"
+                        TextColor="White "
+                        Text="Play All ▶"
+                        />
+          
+            </StackLayout> 
+            <ListView
+                x:Name="videoListView"
+                BackgroundColor="Black"
+                SeparatorColor="LightGray"
+            >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+
+                        <ImageCell 
+                            ImageSource="{Binding videoThumbnail}"
+                            Text="{Binding videoName}"
+                            Detail="{Binding videoTime}"
+                            TextColor="White"
+                            DetailColor="Cyan"
+
+                        />
+
+                        </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+                <Button
+                BackgroundColor="DarkGray"
+            Text="Back"
+            Command="{Binding GoBackCommand}" />
+        </StackLayout>
+</ContentPage.Content>
+</ContentPage>

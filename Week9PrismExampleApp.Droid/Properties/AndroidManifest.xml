@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="Week9PrismExampleApp.Droid" android:versionCode="2" android:versionName="2">
+	<uses-sdk />
+	<application android:label="Week9PrismExampleApp.Droid"></application>
+</manifest>
