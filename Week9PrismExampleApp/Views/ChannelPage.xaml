@@ -22,9 +22,10 @@
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
-    <Button
-                BackgroundColor="DarkGray"
+        <Button
+            BackgroundColor="White"
             Text="Back"
+            TextColor="Blue"
             Command="{Binding GoBackCommand}" />
 </StackLayout>
 </ContentPage>

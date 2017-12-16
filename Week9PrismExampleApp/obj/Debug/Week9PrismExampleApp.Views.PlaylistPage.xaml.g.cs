@@ -11,8 +11,7 @@
 namespace Week9PrismExampleApp.Views {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/gulli003/Projects/FinalProject2/FinalProjectVersion44/Week9PrismExampleApp" +
-        "/Views/PlaylistPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/bolen002/Desktop/Project44/Week9PrismExampleApp/Views/PlaylistPage.xaml")]
     public partial class PlaylistPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

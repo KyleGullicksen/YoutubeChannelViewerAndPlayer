@@ -5,7 +5,8 @@
     xmlns:behaviors="clr-namespace:Prism.Behaviors;assembly=Prism.Forms" 
     xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms" 
     prism:ViewModelLocator.AutowireViewModel="True" 
-    x:Class="Week9PrismExampleApp.Views.PlaylistPage">
+    x:Class="Week9PrismExampleApp.Views.PlaylistPage"
+    Padding="0,20,0,0">
     <StackLayout>
 <ListView 
         ItemsSource="{Binding PlaylistVideos}" 
@@ -22,8 +23,9 @@
         </ListView.ItemTemplate>
     </ListView>
     <Button
-                BackgroundColor="DarkGray"
+            BackgroundColor="White"
             Text="Back"
+            TextColor="Blue"
             Command="{Binding GoBackCommand}" />
     </StackLayout>
 </ContentPage>

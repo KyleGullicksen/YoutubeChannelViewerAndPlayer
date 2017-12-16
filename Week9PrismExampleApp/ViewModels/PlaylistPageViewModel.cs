@@ -117,7 +117,7 @@ namespace Week9PrismExampleApp.ViewModels
             return
                 "https://www.googleapis.com/youtube/v3/search?part=snippet&q="
                 + playlistID
-                + "&type=playlist"
+                + "&type=video"
                 + "&key="
                 + Constants.API.KEY;
         }

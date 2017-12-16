@@ -117,11 +117,10 @@ namespace Week9PrismExampleApp.ViewModels
             return
                 "https://www.googleapis.com/youtube/v3/search?part=snippet&q="
                 + channelID
-                + "&type=channel"
+                + "&type=video"
                 + "&key="
                 + Constants.API.KEY;
         }
-
 
         //Request the resources in this channel from the youtube data api
         private async Task GetVideoIdsFromChannelAsync()
