@@ -37,9 +37,11 @@
 
                 </StackLayout>
                 <Label Text="Videos"
+                IsVisible="{Binding IsVisible}"
                 BackgroundColor="White"
                 TextColor="Black"/>
                 <ListView x:Name="videoListView"
+                IsVisible="{Binding IsVisible}"
                     ItemsSource="{Binding VideoSearchResults}"
                     SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
 
@@ -63,9 +65,11 @@
                     </ListView.ItemTemplate>
                 </ListView>
                  <Label Text="Channels"
+                IsVisible="{Binding IsVisible}"
                 BackgroundColor="White"
                 TextColor="Black"/>
                 <ListView x:Name="channelListView" 
+                IsVisible="{Binding IsVisible}"
                           ItemsSource="{Binding ChannelSearchResults}" 
                           SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
                           BackgroundColor="White"
@@ -88,9 +92,11 @@
                     </ListView.ItemTemplate>
                 </ListView>
                     <Label Text="Playlists"
+                IsVisible="{Binding IsVisible}"
                     BackgroundColor="White"
                     TextColor="Black"/>
                 <ListView x:Name="playListView"
+                IsVisible="{Binding IsVisible}"
                           ItemsSource="{Binding PlaylistSearchResults}"
                           SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
                     
@@ -103,7 +109,7 @@
                         <DataTemplate>
 
                             <ImageCell ImageSource="{Binding DefaultThumbnailURL}"
-                                       Text="{Binding PlaylistTitle}"
+                            Text="{Binding PlaylistTitle}"
                                        Detail="{Binding PlaylistDescription}"
                                        TextColor="Black"
                                        DetailColor="Green"
