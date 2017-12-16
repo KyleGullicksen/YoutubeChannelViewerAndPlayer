@@ -72,6 +72,18 @@ namespace Week9PrismExampleApp.ViewModels {
             }
         }
 
+        private bool _isVisible = false;
+        public bool IsVisible
+        {
+            get {
+                return _isVisible;
+            }
+
+            set {
+                SetProperty(ref _isVisible, value);
+            }
+        }
+
 
         private ObservableCollection<YoutubeResource> _channelSearchResults = new ObservableCollection < YoutubeResource > ();
         public ObservableCollection < YoutubeResource > ChannelSearchResults {
@@ -149,6 +161,7 @@ namespace Week9PrismExampleApp.ViewModels {
             GetSearchResultsFromYoutube(query, "channel");
             GetSearchResultsFromYoutube(query, "video");
             GetSearchResultsFromYoutube(query, "playlist");
+            IsVisible = true;
         }
 
 
