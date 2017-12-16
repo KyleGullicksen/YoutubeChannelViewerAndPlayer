@@ -137,7 +137,7 @@ namespace Week9PrismExampleApp.ViewModels {
                 case ResourceType.PLAYLIST:
                     var navParams2 = new NavigationParameters();
                     navParams2.Add(Constants.ParameterKeys.YoutubeResource, resource);
-                    await _navigationService.NavigateAsync("ChannelPage", navParams2);
+                    await _navigationService.NavigateAsync("PlaylistPage", navParams2);
                     break;
                 default:
                     return;
