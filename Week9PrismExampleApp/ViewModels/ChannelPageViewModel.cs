@@ -20,6 +20,8 @@ namespace Week9PrismExampleApp.ViewModels
         private string channelURL = "";
         private YoutubeResource youtubeResource;
 
+        public DelegateCommand GoBackCommand { get; set; }
+
         private DelegateCommand<YoutubeResource> _videoTappedCommand;
         public DelegateCommand<YoutubeResource> VideoTappedCommand
         {
@@ -58,8 +60,13 @@ namespace Week9PrismExampleApp.ViewModels
         {
             _navigationService = navigationService;
             VideoTappedCommand = new DelegateCommand<YoutubeResource>(HandleVideoTappedCommand);
+            GoBackCommand = new DelegateCommand(GoBack)
         }
 
+        public async void GoBack()
+        {
+            _navigationService.GoBackAsync();
+        }
 
         public void OnNavigatedFrom(NavigationParameters parameters)
         {
