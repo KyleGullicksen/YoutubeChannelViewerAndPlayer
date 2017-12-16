@@ -15,7 +15,7 @@ using Newtonsoft.Json.Linq;
 
 namespace Week9PrismExampleApp.ViewModels
 {
-    public class PlaylistPageViewModel : BindableBase
+    public class PlaylistPageViewModel : BindableBase, INavigationAware
     {
         private string playlistURL = "";
         private YoutubeResource youtubeResource;
@@ -27,7 +27,7 @@ namespace Week9PrismExampleApp.ViewModels
             set { SetProperty(ref _videoTappedCommand, value); }
         }
 
-        private ObservableCollection<YoutubeResource> _playlistVideos;
+        private ObservableCollection<YoutubeResource> _playlistVideos = new ObservableCollection<YoutubeResource>();
         public ObservableCollection<YoutubeResource> PlaylistVideos
         {
             get { return _playlistVideos; }
@@ -133,7 +133,7 @@ namespace Week9PrismExampleApp.ViewModels
                 {
                     resource = new YoutubeResource();
                     processVideoItem(item, resource);
-                    PlaylistVideos.Add(resource);
+                    //PlaylistVideos.Add(resource);
                 }
             }
             catch (Exception e)
@@ -157,6 +157,8 @@ namespace Week9PrismExampleApp.ViewModels
 
             resource.VideoThumbnail = defaultThumbnails.Value<string>("url");
             resource.DefaultThumbnailURL = resource.VideoThumbnail;
+
+            PlaylistVideos.Add(resource);
         }
     }
 }

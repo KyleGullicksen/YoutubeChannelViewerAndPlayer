@@ -5,9 +5,10 @@
     xmlns:behaviors="clr-namespace:Prism.Behaviors;assembly=Prism.Forms" 
     xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms" 
     prism:ViewModelLocator.AutowireViewModel="True" 
-    x:Class="Week9PrismExampleApp.Views.ChannelPage">
-    
-<ListView 
+    x:Class="Week9PrismExampleApp.Views.ChannelPage"
+    Padding="0,20,0,0">
+<StackLayout>
+    <ListView 
         ItemsSource="{Binding ChannelVideos}" 
         SelectedItem="{Binding SelectedItem, Mode=TwoWay}">
         
@@ -21,8 +22,5 @@
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
-    <Button
-                BackgroundColor="DarkGray"
-            Text="Back"
-Command="{Binding GoBackCommand}" />
+</StackLayout>
 </ContentPage>

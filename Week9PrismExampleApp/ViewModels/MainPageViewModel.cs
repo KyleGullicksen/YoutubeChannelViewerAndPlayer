@@ -135,9 +135,9 @@ namespace Week9PrismExampleApp.ViewModels {
                     await CrossShare.Current.OpenBrowser("https://www.youtube.com/watch?v=" + resource.VideoId);
                     break;
                 case ResourceType.PLAYLIST:
-                    //var navParams = new NavigationParameters();
-                    //navParams.Add(Constants.ParameterKeys.YoutubeResource, resource);
-                    //await _navigationService.NavigateAsync("ChannelPage", navParams);
+                    var navParams2 = new NavigationParameters();
+                    navParams2.Add(Constants.ParameterKeys.YoutubeResource, resource);
+                    await _navigationService.NavigateAsync("ChannelPage", navParams2);
                     break;
                 default:
                     return;
