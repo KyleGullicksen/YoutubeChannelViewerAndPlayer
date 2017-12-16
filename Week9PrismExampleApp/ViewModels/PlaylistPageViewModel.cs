@@ -60,7 +60,7 @@ namespace Week9PrismExampleApp.ViewModels
         {
             _navigationService = navigationService;
             VideoTappedCommand = new DelegateCommand<YoutubeResource>(HandleVideoTappedCommand);
-            GoBackCommand = new DelegateCommand(GoBack)
+            GoBackCommand = new DelegateCommand(GoBack);
         }
 
         public async void GoBack()

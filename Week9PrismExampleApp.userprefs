@@ -1,12 +1,12 @@
 ﻿<Properties StartupConfiguration="{A448DDE5-BC84-4996-834C-1A401D8C3692}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Week9PrismExampleApp/Models/YoutubeResource.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Week9PrismExampleApp/ViewModels/PlaylistPageViewModel.cs">
     <Files>
-      <File FileName="Week9PrismExampleApp/Views/MainPage.xaml" Line="123" Column="1" />
-      <File FileName="Week9PrismExampleApp/Views/ChannelPage.xaml" Line="25" Column="1" />
+      <File FileName="Week9PrismExampleApp/Views/MainPage.xaml" Line="129" Column="1" />
+      <File FileName="Week9PrismExampleApp/Views/ChannelPage.xaml" Line="31" Column="1" />
       <File FileName="Week9PrismExampleApp/ViewModels/MainPageViewModel.cs" Line="113" Column="58" />
-      <File FileName="Week9PrismExampleApp/Views/PlaylistPage.xaml" Line="25" Column="1" />
+      <File FileName="Week9PrismExampleApp/Views/PlaylistPage.xaml" Line="29" Column="1" />
       <File FileName="Week9PrismExampleApp/Views/PlaylistPage.xaml.cs" Line="1" Column="1" />
-      <File FileName="Week9PrismExampleApp/ViewModels/PlaylistPageViewModel.cs" Line="136" Column="29" />
+      <File FileName="Week9PrismExampleApp/ViewModels/PlaylistPageViewModel.cs" Line="63" Column="55" />
       <File FileName="Week9PrismExampleApp/App.xaml.cs" Line="34" Column="61" />
       <File FileName="Week9PrismExampleApp/ViewModels/ChannelPageViewModel.cs" Line="78" Column="17" />
       <File FileName="Week9PrismExampleApp/Models/YoutubeResource.cs" Line="13" Column="42" />
@@ -22,7 +22,7 @@
   </MonoDevelop.Ide.DebuggingService.PinnedWatches>
   <MonoDevelop.Ide.ItemProperties.Week9PrismExampleApp.Droid PreferredExecutionTarget="Android.SelectDevice" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Week9PrismExampleApp.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.8759D3B5-0212-4F7E-87FC-B6C1AA8D8A3E">
+  <MonoDevelop.Ide.ItemProperties.Week9PrismExampleApp.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.4EC2AAF3-0763-441F-A273-46D595CA2BCA">
     <MonoDevelop.MacDev.AppleDevelopmentTeam />
   </MonoDevelop.Ide.ItemProperties.Week9PrismExampleApp.iOS>
 </Properties>
