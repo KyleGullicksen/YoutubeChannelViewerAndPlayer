@@ -157,3 +157,4 @@
 /Users/gulli003/Projects/FinalProject/FinalProjectVersion44/Week9PrismExampleApp/obj/Debug/Week9PrismExampleApp.Views.ChannelPage.xaml.g.cs
 /Users/gulli003/Projects/FinalProject/FinalProjectVersion44/Week9PrismExampleApp/obj/Debug/Week9PrismExampleApp.dll
 /Users/gulli003/Projects/FinalProject/FinalProjectVersion44/Week9PrismExampleApp/obj/Debug/Week9PrismExampleApp.pdb
+/Users/bolen002/Desktop/Project44/Week9PrismExampleApp/obj/Debug/Week9PrismExampleApp.Views.PlaylistPage.xaml.g.cs

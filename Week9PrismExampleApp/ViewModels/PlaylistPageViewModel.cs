@@ -1,4 +1,4 @@
-using Prism.Commands;
+﻿using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Navigation;
 using System;
@@ -15,9 +15,9 @@ using Newtonsoft.Json.Linq;
 
 namespace Week9PrismExampleApp.ViewModels
 {
-    public class ChannelViewModel : BindableBase
+    public class PlaylistPageViewModel : BindableBase
     {
-        private string channelURL = "";
+        private string playlistURL = "";
         private YoutubeResource youtubeResource;
 
         private DelegateCommand<YoutubeResource> _videoTappedCommand;
@@ -27,34 +27,34 @@ namespace Week9PrismExampleApp.ViewModels
             set { SetProperty(ref _videoTappedCommand, value); }
         }
 
-        private ObservableCollection<YoutubeResource> _channelVideos;
-        public ObservableCollection<YoutubeResource> ChannelVideos
+        private ObservableCollection<YoutubeResource> _playlistVideos;
+        public ObservableCollection<YoutubeResource> PlaylistVideos
         {
-            get { return _channelVideos; }
-            set { SetProperty(ref _channelVideos, value); }
+            get { return _playlistVideos; }
+            set { SetProperty(ref _playlistVideos, value); }
         }
 
-		//SelectedItem
-		private YoutubeResource _selectedItem;
-		public YoutubeResource SelectedItem
-		{
-			get
-			{
-				return _selectedItem;
-			}
-			set
-			{
-				_selectedItem = value;
+        //SelectedItem
+        private YoutubeResource _selectedItem;
+        public YoutubeResource SelectedItem
+        {
+            get
+            {
+                return _selectedItem;
+            }
+            set
+            {
+                _selectedItem = value;
 
-				if (_selectedItem == null)
-					return;
+                if (_selectedItem == null)
+                    return;
 
-				HandleVideoTappedCommand(value);
-			}
-		}
+                HandleVideoTappedCommand(value);
+            }
+        }
 
         INavigationService _navigationService;
-        public ChannelViewModel(INavigationService navigationService)
+        public PlaylistPageViewModel(INavigationService navigationService)
         {
             _navigationService = navigationService;
             VideoTappedCommand = new DelegateCommand<YoutubeResource>(HandleVideoTappedCommand);
@@ -74,7 +74,7 @@ namespace Week9PrismExampleApp.ViewModels
             if (parameters.ContainsKey(Constants.ParameterKeys.YoutubeResource))
             {
                 youtubeResource = parameters[Constants.ParameterKeys.YoutubeResource] as YoutubeResource;
-                channelURL = makeURL(youtubeResource.ChannelId);
+                playlistURL = makeURL(youtubeResource.PlaylistId);
 
                 //Request the videos for this channel
                 await GetVideoIdsFromChannelAsync();
@@ -82,8 +82,8 @@ namespace Week9PrismExampleApp.ViewModels
             else //Run our testing code
             {
                 YoutubeResource testResource = new YoutubeResource();
-                testResource.ChannelId = "UC_x5XG1OV2P6uZZ5FSM9Ttw";
-                channelURL = makeURL(youtubeResource.ChannelId);
+                testResource.PlaylistId = "UC_x5XG1OV2P6uZZ5FSM9Ttw";
+                playlistURL = makeURL(youtubeResource.PlaylistId);
 
                 //Request the videos for this channel
                 await GetVideoIdsFromChannelAsync();
@@ -105,12 +105,12 @@ namespace Week9PrismExampleApp.ViewModels
             CrossShare.Current.OpenBrowser("https://www.youtube.com/watch?v=" + item.VideoId);
         }
 
-        protected string makeURL(string channelID)
+        protected string makeURL(string playlistID)
         {
             return
                 "https://www.googleapis.com/youtube/v3/search?part=snippet&q="
-                + channelID
-                + "&type=channel"
+                + playlistID
+                + "&type=playlist"
                 + "&key="
                 + Constants.API.KEY;
         }
@@ -120,7 +120,7 @@ namespace Week9PrismExampleApp.ViewModels
         private async Task GetVideoIdsFromChannelAsync()
         {
             var httpClient = new HttpClient();
-            var jsonResponse = await httpClient.GetStringAsync(channelURL);
+            var jsonResponse = await httpClient.GetStringAsync(playlistURL);
 
             try
             {
@@ -133,7 +133,7 @@ namespace Week9PrismExampleApp.ViewModels
                 {
                     resource = new YoutubeResource();
                     processVideoItem(item, resource);
-                    ChannelVideos.Add(resource);
+                    PlaylistVideos.Add(resource);
                 }
             }
             catch (Exception e)
@@ -143,20 +143,20 @@ namespace Week9PrismExampleApp.ViewModels
             }
         }
 
-		protected void processVideoItem(JObject item, YoutubeResource resource)
-		{
-			JObject id = item.Value<JObject>("id");
-			resource.VideoId = id.Value<string>("videoId");
+        protected void processVideoItem(JObject item, YoutubeResource resource)
+        {
+            JObject id = item.Value<JObject>("id");
+            resource.VideoId = id.Value<string>("videoId");
 
-			JObject snippet = item.Value<JObject>("snippet");
-			JObject thumbnails = snippet.Value<JObject>("thumbnails");
-			JObject defaultThumbnails = thumbnails.Value<JObject>("default");
+            JObject snippet = item.Value<JObject>("snippet");
+            JObject thumbnails = snippet.Value<JObject>("thumbnails");
+            JObject defaultThumbnails = thumbnails.Value<JObject>("default");
 
-			resource.VideoTitle = snippet.Value<string>("title");
-			resource.VideoDescription = snippet.Value<string>("description");
+            resource.VideoTitle = snippet.Value<string>("title");
+            resource.VideoDescription = snippet.Value<string>("description");
 
-			resource.VideoThumbnail = defaultThumbnails.Value<string>("url");
-			resource.DefaultThumbnailURL = resource.VideoThumbnail;
-		}
+            resource.VideoThumbnail = defaultThumbnails.Value<string>("url");
+            resource.DefaultThumbnailURL = resource.VideoThumbnail;
+        }
     }
 }

@@ -31,6 +31,7 @@ namespace Week9PrismExampleApp
             Container.RegisterTypeForNavigation<MainPage>();
             Container.RegisterTypeForNavigation<SamplePageForNavigation>();
             Container.RegisterTypeForNavigation<ChannelPage>();
+            Container.RegisterTypeForNavigation<PlaylistPage>();
 		}
 
         public App()
