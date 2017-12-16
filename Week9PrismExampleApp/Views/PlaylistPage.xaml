@@ -6,7 +6,7 @@
     xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms" 
     prism:ViewModelLocator.AutowireViewModel="True" 
     x:Class="Week9PrismExampleApp.Views.PlaylistPage">
-    
+    <StackLayout>
 <ListView 
         ItemsSource="{Binding PlaylistVideos}" 
         SelectedItem="{Binding SelectedItem, Mode=TwoWay}">
@@ -25,4 +25,5 @@
                 BackgroundColor="DarkGray"
             Text="Back"
             Command="{Binding GoBackCommand}" />
+    </StackLayout>
 </ContentPage>
