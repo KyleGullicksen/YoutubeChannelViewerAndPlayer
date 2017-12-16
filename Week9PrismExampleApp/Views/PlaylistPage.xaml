@@ -21,4 +21,8 @@
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
+    <Button
+                BackgroundColor="DarkGray"
+            Text="Back"
+            Command="{Binding GoBackCommand}" />
 </ContentPage>
