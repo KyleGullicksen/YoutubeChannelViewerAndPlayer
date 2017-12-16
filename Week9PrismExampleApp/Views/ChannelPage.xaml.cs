@@ -8,16 +8,6 @@ namespace Week9PrismExampleApp.Views
         {
             InitializeComponent();
         }
-
-		protected override void OnAppearing()
-		{
-			(BindingContext as IPageNavigationAware)?.OnAppearing();
-		}
-
-		protected override void OnDisappearing()
-		{
-			(BindingContext as IPageNavigationAware)?.OnDisappearing();
-		}
     }
 }
 

@@ -15,7 +15,7 @@ using Newtonsoft.Json.Linq;
 
 namespace Week9PrismExampleApp.ViewModels
 {
-    public class ChannelViewModel : BindableBase, IPageNavigationAware
+    public class ChannelViewModel : BindableBase
     {
         private string channelURL = "";
         private YoutubeResource youtubeResource;
@@ -158,15 +158,5 @@ namespace Week9PrismExampleApp.ViewModels
 			resource.VideoThumbnail = defaultThumbnails.Value<string>("url");
 			resource.DefaultThumbnailURL = resource.VideoThumbnail;
 		}
-
-        public void OnAppearing()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void OnDisappearing()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
